@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОКАК</title>
+</head>
+<body>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .app{
+        position: relative;
+        height: 100svh;
+        background: #050505;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        font-size: 18px;
+    }
+    .img{
+        position: absolute;
+        bottom: 0;
+        max-width: 1920px;
+        margin: 0 auto;
+        animation: catAnim 1.5s ease forwards;
+    }
+    .img img{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @keyframes catAnim {
+        0%{
+            translate: 0 50%;
+        }
+        100%{
+            translate: 0 0;
+        }
+    }
+    .okak{
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        translate: -50% 0;
+        font-weight: 900;
+        font-size: 115px;
+    }
+    .error{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 750px;
+        font-weight: 900;
+        transform: translate(-50%, 800px);
+        animation: errorAnim 1.5s ease forwards;
+    }
+
+
+    @keyframes errorAnim {
+        100% {
+            transform: translate(-50%, -400px);
+        }
+    }
+
+    </style>
+
+     <div class="app">
+        <div class="error">
+            404
+        </div>
+        <div class="img">
+            <img src="img/cat.png" alt="cat">
+            <h1 class="okak">ОКАК</h1>
+        </div>
+    </div>
+
+    
+</body>
+</html>
